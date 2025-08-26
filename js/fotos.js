@@ -246,7 +246,7 @@ function criarGaleria() {
 
         polaroidDiv.appendChild(imgElement);
         polaroidDiv.appendChild(captionP);
-        polaroidDiv.appendChild(nomeimage);
+        // polaroidDiv.appendChild(nomeimage);
 
         if (fotos.length % 2 !== 0 && index === fotos.length - 1) {
             polaroidDiv.classList.add('polaroid--centralizada');
