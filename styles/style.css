@@ -1,0 +1,44 @@
+@import url("reset.css");
+@import url("cabecalho.css");
+@import url("saudacao.css");
+@import url("poemas.css");
+@import url("fotos.css");
+@import url("rodape.css");
+
+:root {
+    --cor-de-fundo: #94B2D5;
+    --fonte-principal: "Roboto";
+    --azul-escuro: #162433;
+    --azul-claro: #A8D8FF;
+    --cinza-claro: #b8bfc5;
+    --cinza-medio: #627080;
+    --cinza-escuro: #334355;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.botao {
+    color: var(--cinza-escuro);
+    background-color: white;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    align-self: flex-end;
+}
+
+.botao:hover {
+    background: rgba(245, 245, 245, 0.6)
+}
+
+.first-element {
+    margin: 2rem auto;
+}

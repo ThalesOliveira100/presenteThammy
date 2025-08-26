@@ -1,0 +1,125 @@
+.fotos__titulo {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.fotos__titulo::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: white; 
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.fotos__exemplos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 2rem;
+    grid-template-areas: 
+        "img1 img1"
+        "img2 img3"
+        "img4 img4";
+}
+
+.polaroid {
+    background: white;
+    padding: 10px 10px 20px 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.polaroid:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.polaroid p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+.fotos__exemplos .img1 {
+    grid-area: img1;
+}
+
+.fotos__exemplos .img2 {
+    grid-area: img2;
+}
+
+.fotos__exemplos .img3 {
+    grid-area: img3;
+}
+
+.fotos__exemplos .img4 {
+    grid-area: img4;
+}
+
+.fotos, .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fotos__botao {
+    color: var(--cinza-escuro);
+    background-color: white;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    align-self: flex-end;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fotos__botao:hover {
+    background: rgba(245, 245, 245, 0.6)
+}
+
+.container__grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    box-sizing: border-box; 
+    grid-auto-flow: dense;
+    justify-items: stretch;
+}
+
+.container__grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.polaroid--larga {
+    grid-column: span 2;
+}
+
+.polaroid--centralizada {
+    grid-column: span 2;
+}
